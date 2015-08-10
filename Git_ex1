@@ -1,0 +1,160 @@
+1. mkdir repo
+
+1. cd repo
+
+1. git init
+Initialized empty Git repository in /home/hp-15-6/repo/.git/
+
+2. touch file1
+
+2. vim file1
+
+2. git add file1
+
+3. git commit -m"file1"
+[master (root-commit) 20a0e42] file1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1
+
+4. touch file2
+
+4. vim file2
+
+4. git diff
+
+diff --git a/file2 b/file2
+index f3c77b1..bab1f90 100644
+--- a/file2
++++ b/file2
+@@ -1 +1 @@
+-file2 content
++modified file2 content
+
+4. rm s; git rm s
+
+4. touch .gitignore
+
+4. vim .gitignore # files to be ignored
+
+5. git reset HEAD filename # to untrack filename from "changes not staged for commit"
+
+6. git checkout -- filename # to untrack filename from "changes to be committed"
+
+7. git reset --hard HEAD^ # to undo a commit
+
+8. git status
+
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   file3
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+#	file2
+
+
+9. git log
+
+commit 20a0e42b4694dc4c93bfda6f0b8940737c4fda8d
+Author: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 13:56:51 2015 +0530
+
+    file1
+
+10. git show 20a0e42b4694dc4c93bfda6f0b8940737c4fda8d (SHA key)
+
+commit 20a0e42b4694dc4c93bfda6f0b8940737c4fda8d
+Author: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 13:56:51 2015 +0530
+
+    file1
+
+diff --git a/file1 b/file1
+new file mode 100644
+index 0000000..d903901
+--- /dev/null
++++ b/file1
+@@ -0,0 +1 @@
++file1 content
+
+11. git branch feature1
+
+11. git branch feature2
+
+11.git branch -d feature2
+
+12. git checkout feature1
+
+Switched to branch 'feature1'
+
+12. touch file
+
+12. vim touch
+
+12. git add file3
+
+12. git commit -m"in feature1 branch"'
+
+[feature1 752b875] in feature1 branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3
+
+13. git checkout master
+
+Switched to branch 'master'
+
+13.touch file
+
+13.vim file
+
+13. git commit -m"in master branch"
+
+[master 77dae8c] in master branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file
+
+14. git merge feature1
+
+Merge made by the 'recursive' strategy.
+ file3 |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3
+
+#confilcting files(same name)
+
+Auto-merging file
+CONFLICT (add/add): Merge conflict in file
+Automatic merge failed; fix conflicts and then commit the result.
+
+15. git branch feature2
+
+Switched to branch 'feature2'
+
+15. touch text
+
+15. vim text
+
+15. git add text
+
+15. git commit -m"in feature2 branch"
+
+16.git checkout master
+
+Switched to branch 'master'
+
+16. touch a
+
+16. vim a
+
+16. git add a; git commit -m "master"
+
+17.git rebase featue2
+
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to feature2.
+
+
