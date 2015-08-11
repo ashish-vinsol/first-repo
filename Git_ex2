@@ -1,0 +1,120 @@
+1. mkdir repo; cd repo
+
+1. git remote add rem https://github.com/ashish-vinsol/first-repo
+
+1. git push rem master
+
+2. touch file1; touch file2
+
+2. vim file1; vim file2
+
+2. git add file1; git add file2
+
+2. git commit -m"first commit"
+
+2.2. git tag -a v1.0.0 -m"first tag"
+
+tag v1.0.0
+Tagger: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 17:38:00 2015 +0530
+
+first tag
+
+commit fbf419bda470f0f19762235956be4b7543008cb5
+Merge: f96066a 1be87ec
+Author: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 16:46:56 2015 +0530
+
+3. vim file1; vim file2
+
+3. git commit -a -m"second commit"
+
+3. git tag -a v1.0.1 -m"second tag"
+
+second tag
+
+commit c8185121a02be89004c14120220cc2ba8e6b16f2
+Author: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 18:08:20 2015 +0530
+
+    second commit
+
+diff --git a/1 b/1
+index 0800517..33a67e9 100644
+--- a/1
++++ b/1
+@@ -1 +1 @@
+-ijrnfjrffffr
++jiioijrnfjrffffr
+diff --git a/2 b/2
+index 1ff2f0b..1462690 100644
+--- a/2
++++ b/2
+@@ -1 +1 @@
+-jjerfjnm
++iiijjerfjnm
+
+4. touch file3; vim file4
+
+4. git add file3
+
+4. git commit -a -m"third commit"
+
+4. git tag -a v1.1.0 -m"third tag"
+
+tag v1.1.0
+Tagger: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 18:15:29 2015 +0530
+
+third tag
+
+commit d98c526bf2a56d889c4cbc9ca9de3fa289130507
+Author: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 18:14:34 2015 +0530
+
+    third commit
+
+diff --git a/file3 b/file3
+new file mode 100644
+index 0000000..dc43ed8
+--- /dev/null
++++ b/file3
+@@ -0,0 +1 @@
++file 3
+
+5. vim file1; vim file2
+
+5. git commit -a -m"fourth commit"
+
+5. git tag -a v1.0.2 -m"fourth tag"
+
+6. vim file3
+
+6. git commit -a -m"fifth commit"
+
+6. git tag -a v1.1.1 -m"fifth tag"
+
+tag v1.1.1
+Tagger: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 18:22:29 2015 +0530
+
+fifth tag
+
+commit 6ed0b806c36fe67c8a1446024764a33c23c3ef36
+Author: Ashish <ashish@gmail.com>
+Date:   Mon Aug 10 18:22:12 2015 +0530
+
+    fifth commit
+
+diff --git a/file3 b/file3
+index dc43ed8..04da904 100644
+--- a/file3
++++ b/file3
+@@ -1 +1 @@
+-file 3
++file 3 changed
+
+
+
+
+
