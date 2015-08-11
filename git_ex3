@@ -1,0 +1,106 @@
+1. mkdir project1 project2
+
+2. cd project1; git init
+
+3. git checkout -b staging
+
+Switched to a new branch 'staging'
+
+4. touch test1; vim test1
+
+5. git remote add rem https://github.com/ashish-vinsol/first-repo
+
+5. git push rem staging
+
+Username for 'https://github.com': ashish-vinsol
+Password for 'https://ashish-vinsol@github.com': 
+To https://github.com/ashish-vinsol/first-repo
+ * [new branch]      staging -> staging
+
+
+
+6. cd; cd project2
+
+7. git clone https://github.com/ashish-vinsol/first-repo
+
+
+Cloning into 'first-repo'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 52 (delta 9), reused 43 (delta 6), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+
+8. git fetch origin; git checkout staging
+
+9. vim test1
+
+10. git commit -a -m"second commit" 
+
+10. git push re staging
+
+1 file changed, 1 insertion(+), 1 deletion(-)
+hp-15-6@hp156-HP-15-Notebook-PC:~/project2/first-repo$ git push re staging
+Username for 'https://github.com': ashish-vinsol
+Password for 'https://ashish-vinsol@github.com': 
+To https://github.com/ashish-vinsol/first-repo.git
+   27bd12b..81a4d24  staging -> staging
+
+11. cd; cd project1
+
+12. git checkout staging
+
+13. vim test1
+
+14. git commit -a -m"third commit"
+
+14. git push rem staging
+
+To https://github.com/ashish-vinsol/first-repo
+   81a4d24..a413117  staging ->  staging
+
+15. git checkout master
+
+16. git merge staging
+
+17. git checkout -b testing
+
+Switched to a new branch 'testing'
+
+18. vim test1
+
+19. git commit -a -m"fourth commit"
+
+[testing 2fe246c] fourth commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+20. git push rem testing 
+
+To https://github.com/ashish-vinsol/first-repo
+ * [new branch]      testing -> testing
+
+21. git checkout master
+
+Switched to branch 'master'
+
+22. vim test1; git commit -a -m"fifth commit" 
+
+[master 08d0c33] fifth commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+23. git push rem master
+
+To https://github.com/ashish-vinsol/first-repo
+   9b45842..08d0c33  master -> master24.
+ 
+24. git rebase testing
+
+26. cd project2
+
+27. git checkout --track origin/testing
+
+28. git checkout master
+
+29.git merge testing
+
+
+30. master and testing HEAD points to same commits 
